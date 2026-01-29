@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Metallic Text Effect */
+.text-metallic {
+  background: linear-gradient(to bottom, #ffffff 0%, #cbd5e1 50%, #64748b 51%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Chrome Button Style */
+.btn-chrome {
+  @apply relative px-8 py-3 font-bold uppercase tracking-wider overflow-hidden transition-transform active:scale-95;
+  background: linear-gradient(180deg, #f1f5f9 0%, #cbd5e1 50%, #94a3b8 51%, #cbd5e1 100%);
+  color: #0f172a;
+  border: 1px solid #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-chrome:hover {
+  box-shadow: 0 0 20px #ccff00;
+  border-color: #ccff00;
+}
+
+/* Neon Outline Button */
+.btn-neon {
+  /* Using hex codes for border/text to fallback if utility fails, but keeping overrides */
+  @apply px-8 py-3 font-bold uppercase tracking-wider transition-all hover:text-black;
+  border: 2px solid #ccff00;
+  color: #ccff00;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.2);
+}
+
+.btn-neon:hover {
+  background-color: #ccff00;
+  box-shadow: 0 0 20px #ccff00;
+}
+
+/* Angular/Star Shapes */
+.shape-star {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
